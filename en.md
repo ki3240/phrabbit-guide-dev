@@ -6,7 +6,7 @@ lang: en
 
 # Phrabbit User Guide
 
-Phrabbit is an A/B loop app for foreign-language listening practice. Add audio files, video files, Music library tracks, podcasts, or YouTube links as study material, then repeat the exact section you want to hear or practice shadowing with your own voice. You can also use speech-to-text subtitles, Wordbook review, shadowing recordings, and learning stats.
+Phrabbit is an A/B loop app for foreign-language listening practice. Add audio files, video files, Music library tracks, podcasts, or YouTube links as study material, then repeat the exact section you want to hear, shadow it with your own voice, or write it down in dictation. You can also use speech-to-text subtitles, Wordbook review, saved shadowing recordings and dictation attempts, and learning stats.
 
 > Note: Button names in this guide follow the English UI used in the app. Some labels may appear localized depending on your device language.
 
@@ -25,10 +25,11 @@ Phrabbit is an A/B loop app for foreign-language listening practice. Add audio f
 10. [YouTube Stream Practice](#10-youtube-stream-practice)
 11. [Video Files](#11-video-files)
 12. [Shadowing Recording and Comparison](#12-shadowing-recording-and-comparison)
-13. [Podcasts](#13-podcasts)
-14. [Learning Stats and Settings](#14-learning-stats-and-settings)
-15. [Free vs Premium](#15-free-vs-premium)
-16. [FAQ](#16-faq)
+13. [Dictation](#13-dictation)
+14. [Podcasts](#14-podcasts)
+15. [Learning Stats and Settings](#15-learning-stats-and-settings)
+16. [Free vs Premium](#16-free-vs-premium)
+17. [FAQ](#17-faq)
 
 
 ## 1. Getting Started
@@ -99,7 +100,7 @@ Tap an item to open its player. Audio items open the audio player, YouTube links
 ### 2-4. Delete
 Tap **⋯** at the end of a library row, or touch and hold the row, then choose **Delete**. Swiping a row does not reveal management actions. The visible **⋯** button and the touch-and-hold gesture always show the same menu.
 
-Deleting an item also removes its waveform cache, bookmarks, subtitles, and saved shadowing recordings. If the item has saved recordings, a confirmation appears first. When deleting a folder, you can choose whether to remove only the folder or the folder and everything inside it.
+Deleting an item also removes its waveform cache, bookmarks, subtitles, saved shadowing recordings, and dictation attempts. If the item has saved recordings, a confirmation appears first. When deleting a folder, you can choose whether to remove only the folder or the folder and everything inside it.
 
 
 ## 3. Adding Study Material
@@ -134,12 +135,12 @@ Tap **Add YouTube Link** to open the YouTube link entry screen.
 3. Return to Phrabbit and tap **Paste**.
 4. Confirm the thumbnail and tap **Add**.
 
-The video file is not stored inside the app. Phrabbit stores only the link, playback position, A/B bookmarks, and shadowing recording metadata. Playback happens through the YouTube embedded player.
+The video file is not stored inside the app. Phrabbit stores only the link, playback position, A/B bookmarks, shadowing recordings, and dictation attempts. Playback happens through the YouTube embedded player.
 
 ### 3-5. Add from Podcast
 **Add from Podcast** is a Premium feature. During Premium or the free trial, you can search by podcast name, browse recommendations for your practice language, or import episodes from Apple Podcasts subscriptions and RSS URLs. After the free trial ends, the menu shows a lock and opens the Premium screen when tapped.
 
-See [13. Podcasts](#13-podcasts) for details.
+See [14. Podcasts](#14-podcasts) for details.
 
 
 ## 4. Audio Player
@@ -161,7 +162,7 @@ If audio is loaded when you close the player, the mini player appears at the bot
 If a Premium user turns on **Settings > Playback > Background playback**, audio may continue while the screen is locked or the app is in the background. For free users, or when this setting is off, audio pauses when the app goes into the background.
 
 ### 4-2. Waveform Area
-The waveform shows the audio over time. The black vertical line is the current playhead, and the screen follows the playhead during playback.
+The waveform shows the audio over time. The black vertical line is the current playhead, and the screen follows the playhead during playback. When subtitles exist, short ticks on the waveform mark sentence starts and ends. They are guides only: A/B handles still move freely and do not snap to them.
 
 - **Tap the waveform** - Jump to that position
 - **Long-press the waveform** - Set point A or B
@@ -173,10 +174,11 @@ The waveform shows the audio over time. The black vertical line is the current p
 |---|---|
 | **A-B** | Sets the current position as A, then B on the next tap |
 | Loop count | Infinite loop, or 1, 2, 3, 5, or 10 repeats |
-| Playback speed | Changes speed from 0.5x to 2x |
+| Playback speed | Opens a picker for 0.5×, 0.75×, 1×, 1.25×, 1.5×, or 2× |
 | Shadowing gap | Adds speaking time between A/B repeats |
 | Bookmark button | Saves the current A/B range immediately |
-| List button | Opens saved bookmarks and My Recordings |
+| Practice button | Opens Shadowing or Dictation |
+| List button | Opens saved bookmarks, My Recordings, and Dictation attempts |
 | Back/forward 5s | Rewinds or skips briefly |
 | Play button | Plays or pauses |
 | Sleep timer | Stops automatically after 5, 15, 30, or 60 minutes |
@@ -217,7 +219,7 @@ In the info bar you can:
 
 - Check the range duration
 - Tap the bar to adjust A and B little by little
-- Open shadowing recording with the microphone button
+- Open Shadowing or Dictation with the combined microphone-and-pencil practice button
 - Clear the A/B range with the close button
 
 ### 5-4. Shadowing Gap
@@ -244,7 +246,7 @@ Tap the list button to open the current file's bookmarks. Tap a bookmark to rest
 ![Bookmarks and My Recordings](images/iphone/14-bookmarks-recordings.png)
 *▲ Bookmark list with the Bookmarks / My Recordings switch*
 
-When both bookmarks and recordings exist, the list uses a **Bookmarks / My Recordings** switch so each list stays easy to reach. When there are at least two bookmarks, a **Play All** menu may appear. It can play several bookmarks in order and repeat each bookmark 1, 2, or 3 times.
+When at least two kinds of saved practice exist—bookmarks, recordings, or dictation attempts—a switch keeps each list easy to reach. When all three exist, it uses bookmark, microphone, and pencil icons with counts. When there are at least two bookmarks, a **Play All** menu may appear. It can play several bookmarks in order and repeat each bookmark 1, 2, or 3 times.
 
 Tap **⋯** at the end of a bookmark row, or touch and hold it, to show **Rename**, **Info**, and **Delete**. **Info** shows the exact A/B range, range length, and saved date. Saved recordings use the same gesture for **Info** or **Delete**; their information sheet shows the range, length, number of takes at that practice point, and recording dates. Swiping does not reveal management actions.
 
@@ -302,7 +304,7 @@ Each card may show:
 - Subtitle text
 - A **⋯** menu with **Translate**, **Add to Wordbook**, **Edit**, and **Delete** — touch and hold the card opens the same menu
 
-Tap a subtitle card to set that card's section as A/B and start looping it. The currently playing card is highlighted, and cards inside the A/B range use a different background color.
+Tap a subtitle card to set that card's section as A/B and start looping it. The currently playing card is highlighted, and cards inside the A/B range use a different background color. Newly recognized subtitles that include word timing light up word by word as playback advances. Subtitles created earlier or imported from another source may not include word timing, so this effect may not appear.
 
 ### 7-4. Unrecognized Sections
 Silent or hard-to-recognize sections may appear as **Could not recognize** cards. Use **Enter Manually** to type the subtitle yourself.
@@ -418,10 +420,10 @@ The Stream player shows the YouTube player on top and Phrabbit's A/B loop contro
 Key features:
 
 - Use YouTube's original player and CC button
-- Use Phrabbit's A/B loop, loop count, and speed controls
+- Use Phrabbit's A/B loop, loop count, and six-step speed controls
 - Use a time ruler for precise navigation in long videos
 - Practice in full screen
-- Save bookmarks and shadowing recordings per YouTube link. A bookmark is saved immediately with an automatic name; use **Rename** from the save toast or the saved item's **⋯** or touch-and-hold menu. The same menu offers **Info** for the exact range, length, and saved date, or **Delete**. When space allows, the bookmark card also shows its saved date.
+- Save bookmarks, shadowing recordings, and dictation attempts per YouTube link. A bookmark is saved immediately with an automatic name; use **Rename** from the save toast or the saved item's **⋯** or touch-and-hold menu. The same menu offers **Info** for the exact range, length, and saved date, or **Delete**. When space allows, the bookmark card also shows its saved date.
 
 ### 10-2. YouTube Captions and Wordbook Limits
 YouTube captions are shown only inside the YouTube player. Phrabbit does not bring YouTube caption text into the app.
@@ -432,7 +434,7 @@ Therefore, these features are limited on YouTube streams.
 - Adding YouTube captions directly to Wordbook
 - Showing the original YouTube audio waveform
 
-Instead, turn on captions with YouTube's **CC** button and use Phrabbit's A/B loop and shadowing features for section practice.
+Instead, turn on captions with YouTube's **CC** button and use Phrabbit's A/B loop, shadowing, and dictation for section practice. Phrabbit cannot read YouTube captions as a dictation answer key, so you either check the video yourself or type the actual words and keep them as the answer for the next attempt.
 
 ### 10-3. Full-screen Practice
 Tap **Full-screen Practice** to make the video larger while keeping A/B controls available inside full-screen practice. On iPhone, the app stays in portrait while enlarging the player area. On iPad, the layout expands to fit the larger screen.
@@ -455,7 +457,7 @@ YouTube streams do not continue playing on the lock screen or in the background.
 
 ## 11. Video Files
 
-Phrabbit can also use video files stored on your device or in iCloud Drive as study material. Videos use the same A/B loop, shadowing, and bookmark tools as audio, with subtitles supplied by a separate subtitle file.
+Phrabbit can also use video files stored on your device or in iCloud Drive as study material. Videos use the same A/B loop, shadowing, dictation, and bookmark tools as audio, with subtitles supplied by a separate subtitle file.
 
 ![Video player](images/iphone/20-video-player.png)
 *▲ Video player showing a subtitle cue, the time ruler with A/B, and a saved bookmark*
@@ -487,9 +489,9 @@ Tap a video in the library to open the video player. Its layout follows the Stre
 - The video appears at the top with a seek bar below it. The full-screen button is in the player toolbar.
 - Tap the picture to play or pause.
 - Under the seek bar is the time ruler, which shows the A and B markers.
-- Once A and B are both set, a range info bar appears with the range, a fine-tune button, the scene transcription button, the microphone for shadowing, and a close button that clears the range.
-- Below that are the playback controls: **A-B**, loop count, playback speed, shadowing gap, back/forward 5 seconds, play/pause, and **Save** for a bookmark.
-- Saved **Bookmarks** and **My Recordings** are listed at the bottom. When both exist, a switch keeps the two lists separate.
+- Once A and B are both set, a range info bar appears with the range, a fine-tune button, the scene transcription button, the practice button for Shadowing and Dictation, and a close button that clears the range.
+- Below that are the playback controls: **A-B**, loop count, six-step playback speed, shadowing gap, back/forward 5 seconds, play/pause, and **Save** for a bookmark.
+- Saved **Bookmarks**, **My Recordings**, and **Dictation** attempts are listed at the bottom. When at least two kinds exist, a switch keeps the lists separate.
 
 Video has no waveform. As with YouTube streams, you set and fine-tune A and B on the time ruler and the seek bar.
 
@@ -557,7 +559,7 @@ Video does not play in the background or on the lock screen. When the app goes t
 ### 11-8. Rename, Info, and Delete
 A video title starts as the file name. Tap **⋯** at the end of its library row, or touch and hold the row, then choose **Rename** to change it. **Info** shows the full title, item type, duration, added date, and folder location.
 
-Choose **Delete** from the same menu to remove Phrabbit's record along with its subtitles, bookmarks, and saved shadowing recordings. **The original video file is never deleted.** If saved recordings exist, a confirmation appears first.
+Choose **Delete** from the same menu to remove Phrabbit's record along with its subtitles, bookmarks, saved shadowing recordings, and dictation attempts. **The original video file is never deleted.** If saved recordings exist, a confirmation appears first.
 
 
 ## 12. Shadowing Recording and Comparison
@@ -581,8 +583,8 @@ This works with audio files, videos, and YouTube streams.
 Recording and comparison are Premium features.
 
 1. Set an A/B range.
-2. Tap the microphone button in the A/B info bar or Stream controls.
-3. Use **Listen** to hear the original.
+2. Tap the combined microphone-and-pencil practice button in the A/B info bar. On Stream, tap **Practice**.
+3. Choose **Shadowing** at the top, then use **Listen** to hear the original.
 4. Tap **Record** to record your voice.
 5. Use **My take** to hear only your recording.
 6. Use **Compare** to hear the original and your take back to back.
@@ -604,11 +606,44 @@ Tap a saved recording to return to the A/B range where it was made and reopen th
 To manage a saved recording or bookmark, tap **⋯** at the end of its row or card, or touch and hold it. Both open the same menu; swiping does not delete saved practice. Choose **Info** to see a bookmark's range, length, and saved date, or a recording's range, length, take count, and recording dates.
 
 
-## 13. Podcasts
+## 13. Dictation
+
+Dictation is a Premium practice mode for listening to an A/B range one unit at a time, writing what you hear, and comparing it with the original. It works with audio, video, and YouTube, and is also available during the free trial.
+
+### 13-1. Start Dictation
+1. Set the A/B range you want to practice.
+2. Tap the combined microphone-and-pencil practice button in the A/B info bar. On Stream, tap **Practice**.
+3. Choose **Dictation** at the top. Phrabbit remembers the last practice mode you used the next time you open it.
+
+When audio has subtitles, Phrabbit steps through the sentences that overlap the range. A video with a subtitle file advances by subtitle units. A file without subtitles, or a YouTube link, uses the entire A/B range as one question. Dictation is not available in video or YouTube full-screen practice; return to the regular player first.
+
+### 13-2. Listen and Write
+Use **Listen** to hear the current sentence once, then type what you heard. You can play or pause, move back or forward 2 seconds, and adjust speed. Tap the speed button to show all six choices from 0.5× to 2×. When you are ready, tap **Check answer**.
+
+In a wide iPad window, you can switch between **Keyboard** and **Handwriting**. The handwriting page includes pen color, highlighter, eraser, undo, clear-all, and finger-drawing controls. Your strokes are saved, but Phrabbit does not read or grade handwriting, so compare it with the original yourself. Your input-mode choice is remembered for the next session. A narrow Split View or Stage Manager window shows keyboard input only.
+
+### 13-3. Check and Grade
+When subtitles or an answer you saved yourself are available, Phrabbit compares your writing with the original and marks the differences. For newly transcribed audio, if the A/B range cuts through a sentence, word timings let Phrabbit compare only the part you actually heard. Automatic comparison may be withheld for a cut sentence that has no precise word timing. In that case, **Whole sentence** restores comparison by practicing the full sentence, and **My range** returns to your original range.
+
+Without subtitles, you grade the answer yourself. On YouTube, choose **Check in the video** to look at the video, or **Type the answer** to enter the actual words. That answer is kept for this A/B range and compared automatically next time. If a speech-recognized original is wrong, **Fix this answer** lets you correct the subtitle in place.
+
+On iPhone or a narrow iPad window, **Check in the video** lowers the dictation sheet so you can use the video and its YouTube controls directly. A wide iPad opens a dedicated practice workspace instead: the video is hidden while you write and returns above the comparison when you check the answer.
+
+After checking, choose **Try again** to put the same question at the end of the session, or **Next** to move on. The last question shows **Finish**.
+
+### 13-4. Review and Practice Again
+A session is saved automatically when you close it after writing or checking at least one answer. Open the list button or the **Dictation** section below a player to see attempts grouped by A/B range.
+
+Open a record to review what you wrote, its original text, the automatic comparison, and any saved handwriting. If you practiced the range more than once, **Attempt** chips move between earlier tries; when at least two attempts can be compared, the row also shows how the score changed. Use **Practice again** to reopen the same range, or delete an attempt you no longer need. Saved attempts remain readable after Premium ends, but starting a new dictation session requires Premium or the free trial.
+
+Time spent listening and writing in Dictation counts toward learning stats. Tracking pauses when you leave the app, and it stops automatically after a long period without interaction.
+
+
+## 14. Podcasts
 
 Podcast downloads are a Premium feature. You can search by show name, browse recommendations for your practice language, or import episodes from Apple Podcasts subscriptions and RSS URLs, then practice them in the audio player.
 
-### 13-1. Browse by Practice Language
+### 14-1. Browse by Practice Language
 Tap **Add from Podcast** in the Home plus menu. The first time, choose the language you want to practice. Phrabbit has hand-picked lists for Korean, English, Japanese, Chinese, Spanish, and French, and other practice languages are available too.
 
 After choosing a language, topic chips and show rails appear under **Browse in …**. Learner shows and current news are selected first. Turn chips on or off to add or hide lists such as beginner, slow speech, history, travel, or music. Each language shows only topics with useful search results. Use **Change language** at any time.
@@ -621,15 +656,15 @@ After choosing a language, topic chips and show rails appear under **Browse in �
 
 **Chosen by Phrabbit** marks a hand-picked list; **Apple Podcasts search results** marks an Apple search. A badge such as “Taught in English” means the show teaches the practice language using another language.
 
-### 13-2. Search by Name or RSS URL
+### 14-2. Search by Name or RSS URL
 Enter a show name in **Search podcasts or RSS URL** and search. Tap a show card to open the same episode list used by every other entry point. You can also paste an RSS URL directly into this field to open that feed.
 
-### 13-3. Apple Podcasts Subscriptions
+### 14-3. Apple Podcasts Subscriptions
 Phrabbit may ask for media library permission. Tap **Load from Apple Podcasts** and allow access to show your subscriptions under **My podcasts**. Phrabbit uses this permission only to display shows you are interested in; it downloads episode audio directly from each show's RSS feed.
 
 Tap a channel to open its episode list.
 
-### 13-4. Episode Badges
+### 14-4. Episode Badges
 
 | Badge | Meaning |
 |---|---|
@@ -642,10 +677,10 @@ Tap a channel to open its episode list.
 
 Episodes with the **Creator captions** badge can import the podcast's official captions without running STT again. This is usually more accurate than automatic recognition and requires less waiting, so those episodes are recommended first for study material.
 
-### 13-5. Enter an RSS URL Directly
+### 14-5. Enter an RSS URL Directly
 Besides pasting an RSS URL into the search field, you can expand **Add via RSS URL (advanced)** and enter it manually. Use this for podcasts that do not appear in Apple Podcasts search or when you already know the RSS address.
 
-### 13-6. Downloads and Cellular Data
+### 14-6. Downloads and Cellular Data
 The default setting is **Download over Wi-Fi only**. If you allow cellular downloads, a confirmation may appear before downloading a large episode.
 
 ![Podcast download status](images/iphone/18-podcast-downloads.png)
@@ -656,9 +691,9 @@ Tap an episode to start downloading. While it downloads, tap the stop square ins
 Some podcast files may take a moment to prepare in a playable format the first time you open them. When an episode has official or STT subtitles, supported devices can translate them using [8-3. Translate All Subtitles](#8-3-translate-all-subtitles).
 
 
-## 14. Learning Stats and Settings
+## 15. Learning Stats and Settings
 
-### 14-1. Progress Tab
+### 15-1. Progress Tab
 In the **Progress** tab, you can check your recent practice activity.
 
 ![Learning stats](images/iphone/06-learning-record.png)
@@ -672,9 +707,9 @@ Main items:
 - **Most Practiced** - Audio, video, or YouTube items practiced most often
 - **All Time** - Total accumulated practice time
 
-Tap a Focused Segments or Most Practiced item to return to the original material and practice again. Stats are recorded only for practice after this feature was added.
+Tap a Focused Segments or Most Practiced item to return to the original material and practice again. Time spent actively practicing in Shadowing and Dictation is included. Stats are recorded only for practice after this feature was added.
 
-### 14-2. Settings
+### 15-2. Settings
 Tap **More** at the top right of Home, then choose **Settings**.
 
 ![Settings](images/iphone/19-settings.png)
@@ -691,7 +726,7 @@ You can manage:
 Resetting learning stats cannot be undone.
 
 
-## 15. Free vs Premium
+## 16. Free vs Premium
 
 ### Available for Free
 
@@ -721,13 +756,15 @@ Resetting learning stats cannot be undone.
 - YouTube stream bookmarks
 - Podcast downloads
 - Shadowing recording, comparison, and saved takes
+- Dictation, automatic comparison, saved attempts, and iPad handwriting
+- Full-subtitle Apple Intelligence translation on supported devices
 - Audio background playback and lock screen controls
 
 ### Payment
 Phrabbit Premium is a **one-time purchase**. It is not a subscription. After purchase, you can keep using Premium with the same Apple ID. If you change devices, use **Restore Purchase** on the Premium screen.
 
 
-## 16. FAQ
+## 17. FAQ
 
 **Q. Can I import songs from my Apple Music subscription?**
 
@@ -740,6 +777,10 @@ A. First check that the selected STT language matches the actual audio language.
 **Q. Does STT continue if I leave the app?**
 
 A. No. STT conversion currently needs the app to stay open. If you lock the screen or move to another app, conversion may stop. Audio background playback and STT conversion are separate features.
+
+**Q. Why is there no automatic comparison in Dictation?**
+
+A. Automatic comparison needs subtitles or an answer you saved yourself. If there are no subtitles, or an A/B range cuts through a sentence without precise word timing, you may need to grade it yourself. On YouTube, check the video or type the actual words once so Phrabbit can compare them automatically next time. Handwriting is saved but never read by the app, so it is always self-graded.
 
 **Q. Does audio continue on the lock screen?**
 
