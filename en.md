@@ -628,6 +628,9 @@ Use **Listen** to hear the current sentence once, then type what you heard. You 
 
 In a wide iPad window, you can switch between **Keyboard** and **Handwriting**. The handwriting page includes pen color, highlighter, eraser, undo, clear-all, and finger-drawing controls. Your strokes are saved, but Phrabbit does not read or grade handwriting, so compare it with the original yourself. Your input-mode choice is remembered for the next session. A narrow Split View or Stage Manager window shows keyboard input only.
 
+![Handwriting on iPad](images/ipad/34-dictation-handwriting.png)
+*▲ The handwriting page on a wide iPad window: pen colors, highlighter, eraser, undo and clear-all above the paper, with the Keyboard / Handwriting switch at the bottom left*
+
 ### 13-3. Check and Grade
 When subtitles or an answer you saved yourself are available, Phrabbit compares your writing with the original and marks the differences. For newly transcribed audio, if the A/B range cuts through a sentence, word timings let Phrabbit compare only the part you actually heard. Automatic comparison may be withheld for a cut sentence that has no precise word timing. In that case, **Whole sentence** restores comparison by practicing the full sentence, and **My range** returns to your original range.
 
