@@ -646,7 +646,7 @@ After checking, choose **Try again** to put the same question at the end of the 
 ### 13-4. Review and Practice Again
 A session is saved automatically when you close it after writing or checking at least one answer. Open the list button or the **Dictation** section below a player to see attempts grouped by A/B range.
 
-Open a record to review what you wrote, its original text, the automatic comparison, and any saved handwriting. If you practiced the range more than once, **Attempt** chips move between earlier tries; when at least two attempts can be compared, the row also shows how the score changed. Use **Practice again** to reopen the same range, or delete an attempt you no longer need. Saved attempts remain readable after Premium ends, but starting a new dictation session requires Premium or the free trial.
+Open a record to review what you wrote, its original text, the automatic comparison, and any saved handwriting. If you practiced the range more than once, **Attempt** chips move between earlier tries. Use **Practice again** to reopen the same range, or delete an attempt you no longer need. Saved attempts remain readable after Premium ends, but starting a new dictation session requires Premium or the free trial.
 
 ![Dictation attempts](images/iphone/33-dictation-attempts.png)
 *▲ A saved record: Attempt chips, what you wrote, the original, and Practice again*
