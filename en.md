@@ -615,15 +615,24 @@ Dictation is a Premium practice mode for listening to an A/B range one unit at a
 2. Tap the combined microphone-and-pencil practice button in the A/B info bar. On Stream, tap **Practice**.
 3. Choose **Dictation** at the top. Phrabbit remembers the last practice mode you used the next time you open it.
 
+![Dictation mode](images/iphone/30-dictation-mode.png)
+*▲ The practice sheet with Shadowing / Dictation at the top, Dictation selected*
+
 When audio has subtitles, Phrabbit steps through the sentences that overlap the range. A video with a subtitle file advances by subtitle units. A file without subtitles, or a YouTube link, uses the entire A/B range as one question. Dictation is not available in video or YouTube full-screen practice; return to the regular player first.
 
 ### 13-2. Listen and Write
 Use **Listen** to hear the current sentence once, then type what you heard. You can play or pause, move back or forward 2 seconds, and adjust speed. Tap the speed button to show all six choices from 0.5× to 2×. When you are ready, tap **Check answer**.
 
+![Writing what you hear](images/iphone/31-dictation-typing.png)
+*▲ Typing the sentence, with the transport, speed, and Check answer above the keyboard*
+
 In a wide iPad window, you can switch between **Keyboard** and **Handwriting**. The handwriting page includes pen color, highlighter, eraser, undo, clear-all, and finger-drawing controls. Your strokes are saved, but Phrabbit does not read or grade handwriting, so compare it with the original yourself. Your input-mode choice is remembered for the next session. A narrow Split View or Stage Manager window shows keyboard input only.
 
 ### 13-3. Check and Grade
 When subtitles or an answer you saved yourself are available, Phrabbit compares your writing with the original and marks the differences. For newly transcribed audio, if the A/B range cuts through a sentence, word timings let Phrabbit compare only the part you actually heard. Automatic comparison may be withheld for a cut sentence that has no precise word timing. In that case, **Whole sentence** restores comparison by practicing the full sentence, and **My range** returns to your original range.
+
+![Checking the answer](images/iphone/32-dictation-check.png)
+*▲ Differences marked against the original, with Try again and Next*
 
 Without subtitles, you grade the answer yourself. On YouTube, choose **Check in the video** to look at the video, or **Type the answer** to enter the actual words. That answer is kept for this A/B range and compared automatically next time. If a speech-recognized original is wrong, **Fix this answer** lets you correct the subtitle in place.
 
@@ -635,6 +644,9 @@ After checking, choose **Try again** to put the same question at the end of the 
 A session is saved automatically when you close it after writing or checking at least one answer. Open the list button or the **Dictation** section below a player to see attempts grouped by A/B range.
 
 Open a record to review what you wrote, its original text, the automatic comparison, and any saved handwriting. If you practiced the range more than once, **Attempt** chips move between earlier tries; when at least two attempts can be compared, the row also shows how the score changed. Use **Practice again** to reopen the same range, or delete an attempt you no longer need. Saved attempts remain readable after Premium ends, but starting a new dictation session requires Premium or the free trial.
+
+![Dictation attempts](images/iphone/33-dictation-attempts.png)
+*▲ A saved record: Attempt chips, what you wrote, the original, and Practice again*
 
 Time spent listening and writing in Dictation counts toward learning stats. Tracking pauses when you leave the app, and it stops automatically after a long period without interaction.
 
