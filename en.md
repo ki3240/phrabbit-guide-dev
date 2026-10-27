@@ -494,7 +494,11 @@ For videos that provide subtitles, Premium or the free trial can load YouTube su
 
 The cards support sentence looping, hiding, one-sentence system translation, on-device AI translation on supported devices, **Add to Wordbook**, and subtitle editing. They can also supply text for Shadowing and the answer reference for Dictation. Auto-generated YouTube subtitles may contain mistakes.
 
-After the trial ends, stored cards remain readable and can be re-downloaded; fetching cards for a new video or choosing another track requires Premium. Without access, the Subtitles tab explains the lock and offers an upgrade. YouTube's own **CC** remains available. If cards fail to load, use **Try Again** or the player's CC subtitles. A video without subtitles cannot provide cards.
+After the trial ends, stored cards remain readable and can be re-downloaded; fetching cards for a new video or choosing another track requires Premium. Without access, the Subtitles tab explains the lock and offers an upgrade. YouTube's own **CC** remains available. If cards fail to load, use **Try Again** or the player's CC subtitles. When YouTube sends no caption information at all, the Subtitles tab says so, and playing the video again checks once more.
+
+For a video with no captions on YouTube, the Subtitles tab says so after you play it, and again right away the next time you open it. It takes some effort, but you can set an A/B range and tap **Type a subtitle for this range** to type that range's subtitle yourself. The line becomes a subtitle card for that range, and you can keep adding lines range by range. Typing is free. Until a range is set, the button is dimmed. A range that already has a card can't take a new line; fix the card with **⋯ > Edit** instead.
+
+To change the timing of a card you typed, tap the card so the A/B range matches it, adjust A or B, then choose **⋯ > Match the current A-B range**. Remove a card you don't need with **⋯ > Delete**; the **Undo** shown for a moment brings it back. If YouTube captions appear for that video later and you load them, a confirmation appears before they replace the subtitles you typed.
 
 Phrabbit does not generate STT subtitles from YouTube audio and cannot display its original waveform. These limits do not prevent using subtitles supplied by YouTube.
 
