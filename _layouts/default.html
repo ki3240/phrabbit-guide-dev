@@ -115,8 +115,6 @@
 {%- endcase -%}
 {%- assign guide_version = page.guide_version | default: site.data.guide_versions.current -%}
 {%- assign guide_ui = site.data.guide_ui[guide_lang] -%}
-{%- assign current_guide = site.data.guide_versions.versions | where: 'number', site.data.guide_versions.current | first -%}
-{%- assign selected_guide = site.data.guide_versions.versions | where: 'number', guide_version | first -%}
 {%- assign version_prefix = '/versions/' | append: guide_version -%}
 {%- assign version_home = version_prefix | append: '/index.html' -%}
 {%- assign current_guide_path = '/' | append: guide_lang | append: '.html' -%}
@@ -156,7 +154,7 @@
                 {% assign version_path = '/versions/' | append: version.number | append: '/' | append: guide_lang | append: '.html' %}
                 <a class="version-link{% if guide_version == version.number %} is-active{% endif %}" href="{{ version_path | relative_url }}"{% if guide_version == version.number %} aria-current="page"{% endif %}>
                   <span>{{ version.number }}</span>
-                  <span class="version-status">{% if version.status == 'preview' %}{{ guide_ui.preview }}{% elsif version.number == site.data.guide_versions.current %}{{ guide_ui.latest }}{% else %}{{ guide_ui.released }}{% endif %}</span>
+                  <span class="version-status">{% if version.number == site.data.guide_versions.current %}{{ guide_ui.published }}{% else %}{{ guide_ui.previous }}{% endif %}</span>
                 </a>
               {% endfor %}
             </div>
@@ -233,11 +231,7 @@
       {% if guide_version != site.data.guide_versions.current %}
         <aside class="version-notice" aria-label="{{ guide_ui.version | escape }}">
           <p>{{ guide_ui.archive }} <strong>{{ guide_version }}</strong></p>
-          <a href="{{ current_guide_path | relative_url }}">{{ guide_ui.current }} · {{ site.data.guide_versions.current }}{% if current_guide.status == 'preview' %} · {{ guide_ui.preview }}{% endif %} <span aria-hidden="true">→</span></a>
-        </aside>
-      {% elsif selected_guide.status == 'preview' %}
-        <aside class="version-notice preview-notice">
-          <p>{{ guide_ui.preview_notice }}</p>
+          <a href="{{ current_guide_path | relative_url }}">{{ guide_ui.current }} · {{ site.data.guide_versions.current }} <span aria-hidden="true">→</span></a>
         </aside>
       {% endif %}
 

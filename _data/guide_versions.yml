@@ -1,7 +1,5 @@
+# Dev uses the final publication display; production changes only when deployed.
 current: "4.1.0"
-released: "4.0.0"
 versions:
   - number: "4.1.0"
-    status: preview
   - number: "4.0.0"
-    status: released
