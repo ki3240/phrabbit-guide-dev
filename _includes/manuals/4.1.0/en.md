@@ -630,6 +630,8 @@ Shadowing lets you listen to an A/B range, say it yourself, and compare your rec
 ![Shadowing]({{ '/versions/4.1.0/images/iphone/10-shadowing.png' | relative_url }})
 *▲ Listening, recording, and comparing your voice against the original*
 
+※ The screenshot above is a 4.0.0 example. See 12-2 and 12-3 below for the speed control beside Listen and playback progress added in 4.1.0.
+
 ### 12-1. Shadowing Gap
 This practice mode does not require recording.
 

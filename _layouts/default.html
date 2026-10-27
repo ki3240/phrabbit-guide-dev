@@ -294,8 +294,8 @@
         const searchTriggers = [document.querySelector('#header-search-trigger')];
         const searchClose = document.querySelector('#search-close');
         const switchers = [...document.querySelectorAll('.language-switcher, .version-switcher')];
-        const setLanguageMenuOpen = (isOpen) => {
-          switchers.forEach((switcher) => { switcher.open = isOpen; });
+        const closeGuideMenus = () => {
+          switchers.forEach((switcher) => { switcher.open = false; });
         };
         switchers.forEach((switcher) => switcher.addEventListener('toggle', () => {
           if (switcher.open) {
@@ -312,7 +312,7 @@
           drawerBackdrop.hidden = !isOpen;
           document.body.classList.toggle('drawer-open', isOpen);
           if (isOpen) {
-            setLanguageMenuOpen(false);
+            closeGuideMenus();
             searchPanel.hidden = true;
             searchTriggers.forEach((trigger) => trigger.setAttribute('aria-expanded', 'false'));
           }
@@ -382,7 +382,7 @@
           searchPanel.hidden = !isOpen;
           searchTriggers.forEach((trigger) => trigger.setAttribute('aria-expanded', String(isOpen)));
           if (isOpen) {
-            setLanguageMenuOpen(false);
+            closeGuideMenus();
             setDrawerOpen(false);
             searchInput.focus();
           } else {
@@ -412,7 +412,7 @@
           if (event.key !== 'Escape') return;
           setDrawerOpen(false);
           setSearchOpen(false);
-          setLanguageMenuOpen(false);
+          closeGuideMenus();
         });
       })();
     </script>
