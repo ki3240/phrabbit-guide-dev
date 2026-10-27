@@ -113,6 +113,13 @@
     {%- assign privacy_label = '隱私權政策' -%}
     {%- assign top_label = '回到頂部' -%}
 {%- endcase -%}
+{%- assign guide_version = page.guide_version | default: site.data.guide_versions.current -%}
+{%- assign guide_ui = site.data.guide_ui[guide_lang] -%}
+{%- assign current_guide = site.data.guide_versions.versions | where: 'number', site.data.guide_versions.current | first -%}
+{%- assign selected_guide = site.data.guide_versions.versions | where: 'number', guide_version | first -%}
+{%- assign version_prefix = '/versions/' | append: guide_version -%}
+{%- assign version_home = version_prefix | append: '/index.html' -%}
+{%- assign current_guide_path = '/' | append: guide_lang | append: '.html' -%}
 <!doctype html>
 <html lang="{{ guide_lang | escape }}">
   <head>
@@ -127,7 +134,7 @@
   <body class="guide-page">
     <div class="site-frame">
       <header class="site-header">
-        <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ brand_home_label | escape }}">
+        <a class="brand" href="{{ version_home | relative_url }}" aria-label="{{ brand_home_label | escape }}">
           <picture class="brand-icon">
             <source srcset="{{ '/assets/images/app-icon-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
             <img src="{{ '/assets/images/app-icon-light.png' | relative_url }}" alt="">
@@ -139,17 +146,32 @@
         </a>
 
         <div class="header-actions">
+          <details class="version-switcher">
+            <summary aria-label="{{ guide_ui.version | escape }}">
+              <span>{{ guide_version }}</span>
+              <span class="icon-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="version-menu">
+              {% for version in site.data.guide_versions.versions %}
+                {% assign version_path = '/versions/' | append: version.number | append: '/' | append: guide_lang | append: '.html' %}
+                <a class="version-link{% if guide_version == version.number %} is-active{% endif %}" href="{{ version_path | relative_url }}"{% if guide_version == version.number %} aria-current="page"{% endif %}>
+                  <span>{{ version.number }}</span>
+                  <span class="version-status">{% if version.status == 'preview' %}{{ guide_ui.preview }}{% elsif version.number == site.data.guide_versions.current %}{{ guide_ui.latest }}{% else %}{{ guide_ui.released }}{% endif %}</span>
+                </a>
+              {% endfor %}
+            </div>
+          </details>
           <details class="language-switcher">
             <summary aria-label="{{ language_label | escape }}">
               <span>{{ current_language }}</span>
               <span class="icon-chevron" aria-hidden="true"></span>
             </summary>
             <div class="language-menu">
-              <a class="language-link{% if guide_lang == 'en' %} is-active{% endif %}" href="{{ '/en.html' | relative_url }}">English</a>
-              <a class="language-link{% if guide_lang == 'ko' %} is-active{% endif %}" href="{{ '/ko.html' | relative_url }}">한국어</a>
-              <a class="language-link{% if guide_lang == 'ja' %} is-active{% endif %}" href="{{ '/ja.html' | relative_url }}">日本語</a>
-              <a class="language-link{% if guide_lang == 'zh-Hans' %} is-active{% endif %}" href="{{ '/zh-Hans.html' | relative_url }}">简体中文</a>
-              <a class="language-link{% if guide_lang == 'zh-Hant' %} is-active{% endif %}" href="{{ '/zh-Hant.html' | relative_url }}">繁體中文</a>
+              <a class="language-link{% if guide_lang == 'en' %} is-active{% endif %}" href="{{ version_prefix | append: '/en.html' | relative_url }}">English</a>
+              <a class="language-link{% if guide_lang == 'ko' %} is-active{% endif %}" href="{{ version_prefix | append: '/ko.html' | relative_url }}">한국어</a>
+              <a class="language-link{% if guide_lang == 'ja' %} is-active{% endif %}" href="{{ version_prefix | append: '/ja.html' | relative_url }}">日本語</a>
+              <a class="language-link{% if guide_lang == 'zh-Hans' %} is-active{% endif %}" href="{{ version_prefix | append: '/zh-Hans.html' | relative_url }}">简体中文</a>
+              <a class="language-link{% if guide_lang == 'zh-Hant' %} is-active{% endif %}" href="{{ version_prefix | append: '/zh-Hant.html' | relative_url }}">繁體中文</a>
             </div>
           </details>
           <button class="header-tool mobile-header-toc" id="mobile-toc-trigger" type="button" aria-controls="mobile-toc-drawer" aria-expanded="false" title="{{ toc_button_label | escape }}">
@@ -208,6 +230,17 @@
         </div>
       </section>
 
+      {% if guide_version != site.data.guide_versions.current %}
+        <aside class="version-notice" aria-label="{{ guide_ui.version | escape }}">
+          <p>{{ guide_ui.archive }} <strong>{{ guide_version }}</strong></p>
+          <a href="{{ current_guide_path | relative_url }}">{{ guide_ui.current }} · {{ site.data.guide_versions.current }}{% if current_guide.status == 'preview' %} · {{ guide_ui.preview }}{% endif %} <span aria-hidden="true">→</span></a>
+        </aside>
+      {% elsif selected_guide.status == 'preview' %}
+        <aside class="version-notice preview-notice">
+          <p>{{ guide_ui.preview_notice }}</p>
+        </aside>
+      {% endif %}
+
       <div class="guide-layout">
         <aside class="sidebar" aria-label="{{ toc_panel_label | escape }}">
           <nav class="sidebar-toc">
@@ -260,11 +293,17 @@
         const searchStatus = document.querySelector('#search-status');
         const searchTriggers = [document.querySelector('#header-search-trigger')];
         const searchClose = document.querySelector('#search-close');
-        const languageSwitcher = document.querySelector('.language-switcher');
-
+        const switchers = [...document.querySelectorAll('.language-switcher, .version-switcher')];
         const setLanguageMenuOpen = (isOpen) => {
-          languageSwitcher.open = isOpen;
+          switchers.forEach((switcher) => { switcher.open = isOpen; });
         };
+        switchers.forEach((switcher) => switcher.addEventListener('toggle', () => {
+          if (switcher.open) {
+            switchers.filter((other) => other !== switcher).forEach((other) => { other.open = false; });
+            setDrawerOpen(false);
+            setSearchOpen(false);
+          }
+        }));
 
         const setDrawerOpen = (isOpen) => {
           drawer.classList.toggle('is-open', isOpen);
@@ -355,8 +394,9 @@
         searchTriggers.forEach((trigger) => trigger.addEventListener('click', () => setSearchOpen(searchPanel.hidden)));
         searchClose.addEventListener('click', () => setSearchOpen(false));
         document.addEventListener('click', (event) => {
-          if (languageSwitcher.contains(event.target)) return;
-          setLanguageMenuOpen(false);
+          switchers.forEach((switcher) => {
+            if (!switcher.contains(event.target)) switcher.open = false;
+          });
         });
         searchInput.addEventListener('input', renderSearchResults);
         searchResults.addEventListener('click', (event) => {

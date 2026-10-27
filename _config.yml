@@ -1,3 +1,10 @@
 title: Phrabbit User Guide
 description: A/B loop, shadowing, and dictation app for language learning
 theme: jekyll-theme-cayman
+
+# Archive front matter remains identical to the released source.
+defaults:
+  - scope:
+      path: "versions/4.0.0"
+    values:
+      guide_version: "4.0.0"

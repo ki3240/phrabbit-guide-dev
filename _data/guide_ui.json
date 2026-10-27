@@ -1,0 +1,47 @@
+{
+  "ko": {
+    "version": "설명서 버전 선택",
+    "preview": "미리보기",
+    "released": "정식 출시",
+    "latest": "최신",
+    "archive": "보관된 설명서입니다. 보고 있는 버전:",
+    "current": "현재 설명서 보기",
+    "preview_notice": "이 설명서는 4.1.0 출시 전 미리보기입니다."
+  },
+  "en": {
+    "version": "Choose guide version",
+    "preview": "Preview",
+    "released": "Released",
+    "latest": "Latest",
+    "archive": "This is an archived guide. Version:",
+    "current": "View current guide",
+    "preview_notice": "This is a preview of the guide for the upcoming 4.1.0 release."
+  },
+  "ja": {
+    "version": "説明書のバージョンを選択",
+    "preview": "プレビュー",
+    "released": "公開中",
+    "latest": "最新",
+    "archive": "保存版の説明書です。表示中のバージョン：",
+    "current": "現在の説明書を見る",
+    "preview_notice": "この説明書は4.1.0リリース前のプレビューです。"
+  },
+  "zh-Hans": {
+    "version": "选择说明书版本",
+    "preview": "预览",
+    "released": "已发布",
+    "latest": "最新",
+    "archive": "这是存档说明书。当前版本：",
+    "current": "查看当前说明书",
+    "preview_notice": "本说明书是 4.1.0 发布前的预览。"
+  },
+  "zh-Hant": {
+    "version": "選擇說明書版本",
+    "preview": "預覽",
+    "released": "已發布",
+    "latest": "最新",
+    "archive": "這是封存說明書。目前版本：",
+    "current": "查看目前說明書",
+    "preview_notice": "本說明書是 4.1.0 發布前的預覽。"
+  }
+}
