@@ -341,6 +341,8 @@ Each card may show:
 
 Tap a subtitle card to set that card's section as A/B and start looping it. The currently playing card is highlighted, and cards inside the A/B range use a different background color. Newly recognized subtitles that include word timing light up word by word as playback advances. Subtitles created earlier or imported from another source may not include word timing, so this effect may not appear.
 
+Scrolling the subtitle list by hand collapses the controls at the bottom right into a single small **⋯** button. They expand automatically about two seconds after scrolling stops, or immediately when you tap **⋯**. Automatic scrolling that follows playback does not collapse them.
+
 After you finish scrolling by hand, automatic following resumes when playback reaches a subtitle card already visible on screen. **Current Position (◎)** returns the audio waveform and cards to the playing position immediately. Following stays paused while you select sentences to hide.
 
 ### 7-4. Unrecognized Sections
@@ -479,6 +481,8 @@ The YouTube picture stays above a fixed time ruler and a seven-control tool row:
 
 Tap a subtitle card to loop that sentence. Scrolling by hand pauses following; **Current Subtitle (◎)** returns to the current sentence. Use the floating eye, translation, and **···** controls for hiding and subtitle settings.
 
+Scrolling the subtitle list by hand collapses the controls at the bottom right into a single small **⋯** button. They expand automatically about two seconds after scrolling stops, or immediately when you tap **⋯**. Automatic scrolling that follows playback does not collapse them.
+
 After you finish scrolling, following resumes when playback reaches a card visible on screen; you can also return immediately with ◎.
 
 In a wide landscape iPad window, the thumbnail, title, and full-screen button share a full-width top bar. Tabs sit above the right-hand list, beside the picture and tools on the left.
@@ -586,6 +590,8 @@ Each sentence card groups the subtitle lines belonging to one sentence. Tap it t
 *▲ Sentence cards and the fixed practice tools stay on screen together*
 
 The current sentence is highlighted. Scroll to inspect other cards, then use **Current Subtitle (◎)** to return. The floating eye hides text while preserving card timing and looping; **···** chooses the whole video, selected sentences, or the A/B range. The translation button toggles Original only and Original + translation; Translation only is an explicit choice in settings.
+
+Scrolling the subtitle list by hand collapses the controls at the bottom right into a single small **⋯** button. They expand automatically about two seconds after scrolling stops, or immediately when you tap **⋯**. Automatic scrolling that follows playback does not collapse them.
 
 After you finish scrolling, following resumes when playback reaches a card visible on screen; you can also return immediately with ◎.
 
